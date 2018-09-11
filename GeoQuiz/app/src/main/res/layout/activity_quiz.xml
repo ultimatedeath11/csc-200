@@ -19,10 +19,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/true_button"/>
+            android:text="@string/true_button"
+            android:id="@+id/true_button"
+            />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/false_button"/>
+            android:text="@string/false_button"
+            android:id="@+id/false_button"
+            />
     </LinearLayout>
 </LinearLayout>
