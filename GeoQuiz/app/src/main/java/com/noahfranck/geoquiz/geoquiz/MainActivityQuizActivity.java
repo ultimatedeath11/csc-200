@@ -2,16 +2,16 @@ package com.noahfranck.geoquiz.geoquiz;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
-import static android.widget.Toast.*;
 
 public class MainActivityQuizActivity extends AppCompatActivity {
 
     private Button mTrueButton;
     private Button mFalseButton;
+    private Toast mToast;
 
     public MainActivityQuizActivity() {
     }
@@ -24,14 +24,18 @@ public class MainActivityQuizActivity extends AppCompatActivity {
 
         mTrueButton = (Button) findViewById(R.id.true_button);
         mFalseButton = (Button) findViewById(R.id.false_button);
+
         mTrueButton.setOnClickListener(new View.OnClickListener()
         {
-
-            public void onClick(View)
+            @Override
+            public void onClick(View v)
             {
                 //true button pressed
-                System.out.println("True button clicked");
-                makeText(QuizActivity.his, R.string.correct_answer, LENGTH_SHORT).show();
+
+                System.out.println("Gravity set");
+                mToast = Toast.makeText(MainActivityQuizActivity.this,R.string.incorrect_answer,Toast.LENGTH_SHORT);
+                mToast.setGravity(Gravity.TOP | Gravity.LEFT,410,200);
+                mToast.show();
             }
         });
         mFalseButton.setOnClickListener(new View.OnClickListener()
@@ -40,7 +44,9 @@ public class MainActivityQuizActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 //false button pressed
-                makeText(QuizActivity.his, R.string.incorrect_answer, Length_SHORT).show();
+                mToast = Toast.makeText(MainActivityQuizActivity.this,R.string.correct_answer,Toast.LENGTH_SHORT);
+                mToast.setGravity(Gravity.TOP | Gravity.LEFT,410,200);
+                mToast.show();
             }
         });
     }
