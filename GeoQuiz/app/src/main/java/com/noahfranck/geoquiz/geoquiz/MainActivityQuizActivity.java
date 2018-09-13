@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import static android.widget.Toast.*;
 
 public class MainActivityQuizActivity extends AppCompatActivity {
 
@@ -12,6 +15,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
 
     public MainActivityQuizActivity() {
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +26,21 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         mFalseButton = (Button) findViewById(R.id.false_button);
         mTrueButton.setOnClickListener(new View.OnClickListener()
         {
+
+            public void onClick(View)
+            {
+                //true button pressed
+                System.out.println("True button clicked");
+                makeText(QuizActivity.his, R.string.correct_answer, LENGTH_SHORT).show();
+            }
+        });
+        mFalseButton.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v)
             {
-                System.out.println("True button clicked");
+                //false button pressed
+                makeText(QuizActivity.his, R.string.incorrect_answer, Length_SHORT).show();
             }
         });
     }
