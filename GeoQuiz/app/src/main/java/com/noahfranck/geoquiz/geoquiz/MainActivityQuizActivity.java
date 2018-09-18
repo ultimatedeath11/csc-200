@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivityQuizActivity extends AppCompatActivity {
@@ -12,6 +13,19 @@ public class MainActivityQuizActivity extends AppCompatActivity {
     private Button mTrueButton;
     private Button mFalseButton;
     private Toast mToast;
+    private Button mNextButton;
+    private TextView mQuestionTextView;
+
+    private Question[] mQuestionBank = new Question[]
+            {
+                    new Question(R.String.question_australia, true),
+                    new Question(R.String.question_oceans, true),
+                    new Question(R.String.question_mideast, false),
+                    new Question(R.String.question_africa, false),
+                    new Question(R.String.question_america, true),
+                    new Question(R.String.question_asia, true),
+            };
+
 
     public MainActivityQuizActivity() {
     }
