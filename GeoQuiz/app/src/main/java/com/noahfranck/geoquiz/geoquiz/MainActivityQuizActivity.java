@@ -18,14 +18,15 @@ public class MainActivityQuizActivity extends AppCompatActivity {
 
     private Question[] mQuestionBank = new Question[]
             {
-                    new Question(R.String.question_australia, true),
-                    new Question(R.String.question_oceans, true),
-                    new Question(R.String.question_mideast, false),
-                    new Question(R.String.question_africa, false),
-                    new Question(R.String.question_america, true),
-                    new Question(R.String.question_asia, true),
+                    new Question(R.string.question_australia, true),
+                    new Question(R.string.question_ocean, true),
+                    new Question(R.string.question_mideast, false),
+                    new Question(R.string.question_africa, false),
+                    new Question(R.string.question_americas, true),
+                    new Question(R.string.question_asia, true),
             };
 
+	private int mCurrentIndex = 0;
 
     public MainActivityQuizActivity() {
     }
