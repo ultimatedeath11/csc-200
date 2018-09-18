@@ -5,4 +5,9 @@
     <string name="question_text">Canberra is the captial of Australia?</string>
     <string name="correct_answer">Correct!</string>
     <string name="incorrect_answer">Incorect</string>
+    <string name="question_ocean">The Pacific Ocean is larger than the Atlantic Ocean.</string>
+    <string name="question_mideast">The Suez Canal Connects the Red Sea and the Indian Ocean.</string>
+    <string name="question_africa">The source of the Nile River is in Egypt.</string>
+    <string name="question_americas">The amazon River is the longest river in the Americas.</string>
+    <string name="question_asia">Lake Baikal is the world\'s oldes and deepest freshwater lake.</string>
 </resources>
