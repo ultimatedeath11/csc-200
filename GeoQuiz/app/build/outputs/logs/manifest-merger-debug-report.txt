@@ -1,0 +1,110 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:2:1-20:12
+INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:2:1-20:12
+INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:2:1-20:12
+INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:2:1-20:12
+MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/f10a577b9816fd974aac5453720db91f/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.2.0.aar/b874120bc42146d85a4c2adb46b9aa3d/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.2.0.aar/944987695bc0fdf9013fb59cf7365f15/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:support-v4:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-v4-24.2.0.aar/f3f9a0f2c96808c6b02c6bdbe2bed622/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/fd252a19c8c30adfb7581ed7073ade7d/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/edb439bdafc7da785cfd864fe590af27/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/5e4329e9f8aa07f513622bbb07049076/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/f0c4cc171d07cb44d4f42ce815e71452/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-compat:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/f080c5eff78cced8814f2a70dbf06715/AndroidManifest.xml:17:1-27:12
+INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:2:1-20:12
+INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:2:1-20:12
+INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:2:1-20:12
+	package
+		ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:3:11-51
+		INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
+		ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:2:1-20:12
+		INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
+		ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:2:1-20:12
+		INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:5:5-18:19
+MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/f10a577b9816fd974aac5453720db91f/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/f10a577b9816fd974aac5453720db91f/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.2.0.aar/b874120bc42146d85a4c2adb46b9aa3d/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.2.0.aar/b874120bc42146d85a4c2adb46b9aa3d/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.2.0.aar/944987695bc0fdf9013fb59cf7365f15/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.2.0.aar/944987695bc0fdf9013fb59cf7365f15/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-v4-24.2.0.aar/f3f9a0f2c96808c6b02c6bdbe2bed622/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-v4-24.2.0.aar/f3f9a0f2c96808c6b02c6bdbe2bed622/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/fd252a19c8c30adfb7581ed7073ade7d/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/fd252a19c8c30adfb7581ed7073ade7d/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/edb439bdafc7da785cfd864fe590af27/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/edb439bdafc7da785cfd864fe590af27/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/5e4329e9f8aa07f513622bbb07049076/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/5e4329e9f8aa07f513622bbb07049076/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/f0c4cc171d07cb44d4f42ce815e71452/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/f0c4cc171d07cb44d4f42ce815e71452/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/f080c5eff78cced8814f2a70dbf06715/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/f080c5eff78cced8814f2a70dbf06715/AndroidManifest.xml:25:5-20
+	android:supportsRtl
+		ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:9:9-35
+	android:label
+		ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:8:9-41
+	android:icon
+		ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:10:9-40
+activity#com.noahfranck.geoquiz.geoquiz.MainActivityQuizActivity
+ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:11:9-17:20
+	android:name
+		ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:11:19-59
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:12:13-16:29
+action#android.intent.action.MAIN
+ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:13:17-68
+	android:name
+		ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:13:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:15:17-76
+	android:name
+		ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml:15:27-74
+uses-sdk
+INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
+INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/f10a577b9816fd974aac5453720db91f/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/f10a577b9816fd974aac5453720db91f/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.2.0.aar/b874120bc42146d85a4c2adb46b9aa3d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-24.2.0.aar/b874120bc42146d85a4c2adb46b9aa3d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.2.0.aar/944987695bc0fdf9013fb59cf7365f15/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-vector-drawable:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-24.2.0.aar/944987695bc0fdf9013fb59cf7365f15/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-v4-24.2.0.aar/f3f9a0f2c96808c6b02c6bdbe2bed622/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-v4-24.2.0.aar/f3f9a0f2c96808c6b02c6bdbe2bed622/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/fd252a19c8c30adfb7581ed7073ade7d/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-fragment-24.2.0.aar/fd252a19c8c30adfb7581ed7073ade7d/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/edb439bdafc7da785cfd864fe590af27/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-core-utils-24.2.0.aar/edb439bdafc7da785cfd864fe590af27/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/5e4329e9f8aa07f513622bbb07049076/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-media-compat-24.2.0.aar/5e4329e9f8aa07f513622bbb07049076/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/f0c4cc171d07cb44d4f42ce815e71452/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-core-ui-24.2.0.aar/f0c4cc171d07cb44d4f42ce815e71452/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/f080c5eff78cced8814f2a70dbf06715/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/support-compat-24.2.0.aar/f080c5eff78cced8814f2a70dbf06715/AndroidManifest.xml:21:5-23:58
+INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
+INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:24.2.0] /Users/student/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/f10a577b9816fd974aac5453720db91f/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
+		ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
+		ADDED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/student/Desktop/mobile-device-programming/GeoQuiz/app/src/main/AndroidManifest.xml
