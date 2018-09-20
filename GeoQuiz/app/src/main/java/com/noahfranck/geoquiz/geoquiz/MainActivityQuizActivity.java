@@ -89,8 +89,10 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         mPreviousQuestion.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onCLick(View v)
+            public void onClick(View v)
             {
+                if (mCurrentIndex ==  0)
+                    mCurrentIndex = mQuestionBank.length;
                 mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
                 updateQuestion();
             }
