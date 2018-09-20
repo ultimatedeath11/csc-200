@@ -5,24 +5,31 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
+    ir-eligibility="R_CLASS_CHANGE"
     plugin-version="3.1.4"
-    timestamp="1537456893083"
+    timestamp="1537458122492"
     token="5615482589718854761"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="333" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="34" />
     <task
         name="verifier"
-        duration="0" />
+        duration="6" />
 
+    <artifact
+        location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        type="SPLIT" />
     <artifact
         location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
         type="SPLIT_MAIN" />
@@ -70,26 +77,15 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1537456168101"
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1537458122492"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1537456275345"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1537456893083"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
