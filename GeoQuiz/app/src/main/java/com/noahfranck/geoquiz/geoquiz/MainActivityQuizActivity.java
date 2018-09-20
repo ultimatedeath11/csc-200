@@ -28,11 +28,24 @@ public class MainActivityQuizActivity extends AppCompatActivity {
 
     public MainActivityQuizActivity() {
     }
-
+    private void toggleButtons()
+    {
+        if (mTrueButton.isEnabled() == true)
+        {
+            mTrueButton.setEnabled(false);
+            mFalseButton.setEnabled(false);
+        }else
+        if(mTrueButton.isEnabled() == false)
+        {
+            mTrueButton.setEnabled(true);
+            mFalseButton.setEnabled(true);
+        }
+    }
     private void updateQuestion()
     {
         int question = mQuestionBank[mCurrentIndex].getTextResId();
         mQuestionTextView.setText(question);
+        toggleButtons();
     }
     private void checkAnswer(boolean userPressedTrue)
     {
@@ -45,7 +58,9 @@ public class MainActivityQuizActivity extends AppCompatActivity {
        }else{
            messageResId = R.string.incorrect_answer;
        }
-       Toast.makeText(this,messageResId,Toast.LENGTH_SHORT).show();
+
+       Toast.makeText(this,messageResId,Toast.LENGTH_LONG).show();
+        toggleButtons();
     }
 
     @Override
@@ -58,7 +73,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         mNextButton = (Button) findViewById(R.id.next_button);
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
         mPreviousQuestion = (Button) findViewById(R.id.previous_button);
-
+        toggleButtons();
         updateQuestion();
 
         mTrueButton.setOnClickListener(new View.OnClickListener()
@@ -67,6 +82,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 checkAnswer(true);
+
             }
         });
         mFalseButton.setOnClickListener(new View.OnClickListener()
@@ -75,6 +91,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 checkAnswer(false);
+
             }
         });
         mNextButton.setOnClickListener(new View.OnClickListener()
@@ -83,7 +100,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
-                updateQuestion();
+                toggleButtons();
             }
         });
         mPreviousQuestion.setOnClickListener(new View.OnClickListener()
@@ -95,6 +112,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
                     mCurrentIndex = mQuestionBank.length;
                 mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
                 updateQuestion();
+
             }
         });
     }

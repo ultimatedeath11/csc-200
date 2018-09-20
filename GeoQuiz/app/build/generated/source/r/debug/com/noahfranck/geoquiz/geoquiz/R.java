@@ -1955,7 +1955,9 @@ public final class R {
     public static final int abc_textfield_search_default_mtrl_alpha=0x7f06004d;
     public static final int abc_textfield_search_material=0x7f06004e;
     public static final int abc_vector_test=0x7f06004f;
-    public static final int notification_template_icon_bg=0x7f060050;
+    public static final int arrow_left=0x7f060050;
+    public static final int arrow_right=0x7f060051;
+    public static final int notification_template_icon_bg=0x7f060052;
   }
   public static final class id {
     public static final int action0=0x7f070000;
@@ -2148,15 +2150,16 @@ public final class R {
     public static final int false_button=0x7f0b0021;
     public static final int incorrect_answer=0x7f0b0022;
     public static final int next_button=0x7f0b0023;
-    public static final int question_africa=0x7f0b0024;
-    public static final int question_americas=0x7f0b0025;
-    public static final int question_asia=0x7f0b0026;
-    public static final int question_australia=0x7f0b0027;
-    public static final int question_mideast=0x7f0b0028;
-    public static final int question_ocean=0x7f0b0029;
-    public static final int search_menu_title=0x7f0b002a;
-    public static final int status_bar_notification_info_overflow=0x7f0b002b;
-    public static final int true_button=0x7f0b002c;
+    public static final int previous_button=0x7f0b0024;
+    public static final int question_africa=0x7f0b0025;
+    public static final int question_americas=0x7f0b0026;
+    public static final int question_asia=0x7f0b0027;
+    public static final int question_australia=0x7f0b0028;
+    public static final int question_mideast=0x7f0b0029;
+    public static final int question_ocean=0x7f0b002a;
+    public static final int search_menu_title=0x7f0b002b;
+    public static final int status_bar_notification_info_overflow=0x7f0b002c;
+    public static final int true_button=0x7f0b002d;
   }
   public static final class style {
     public static final int AlertDialog_AppCompat=0x7f0c0000;
