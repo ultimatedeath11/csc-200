@@ -6,7 +6,7 @@
     density="xhdpi"
     format="10"
     plugin-version="3.1.4"
-    timestamp="1537456470586"
+    timestamp="1537456893083"
     token="5615482589718854761"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -88,7 +88,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1537456470586"
+        timestamp="1537456893083"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
