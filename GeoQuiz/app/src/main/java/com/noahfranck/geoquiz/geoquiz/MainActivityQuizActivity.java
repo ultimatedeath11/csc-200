@@ -2,7 +2,6 @@ package com.noahfranck.geoquiz.geoquiz;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -15,7 +14,6 @@ public class MainActivityQuizActivity extends AppCompatActivity {
     private Toast mToast;
     private Button mNextButton;
     private TextView mQuestionTextView;
-    private TextView mquestionTextView;
     private Question[] mQuestionBank = new Question[]
             {
                     new Question(R.string.question_australia, true),
@@ -31,6 +29,24 @@ public class MainActivityQuizActivity extends AppCompatActivity {
     public MainActivityQuizActivity() {
     }
 
+    private void updateQuestion()
+    {
+        int question = mQuestionBank[mCurrentIndex].getTextResId();
+        mQuestionTextView.setText(question);
+    }
+    private void checkAnswer(boolean userPressedTrue)
+    {
+       boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
+       int messageResId = 0;
+
+       if(userPressedTrue == answerIsTrue)
+       {
+           messageResId = R.string.correct_answer;
+       }else{
+           messageResId = R.string.incorrect_answer;
+       }
+       Toast.makeText(this,messageResId,Toast.LENGTH_SHORT).show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,18 +56,14 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         mTrueButton = (Button) findViewById(R.id.true_button);
         mFalseButton = (Button) findViewById(R.id.false_button);
         mNextButton = (Button) findViewById(R.id.next_button);
-
+        mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
+        updateQuestion();
         mTrueButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                //true button pressed
-
-                System.out.println("Gravity set");
-                mToast = Toast.makeText(MainActivityQuizActivity.this,R.string.incorrect_answer,Toast.LENGTH_SHORT);
-                mToast.setGravity(Gravity.TOP | Gravity.LEFT,410,200);
-                mToast.show();
+                checkAnswer(true);
             }
         });
         mFalseButton.setOnClickListener(new View.OnClickListener()
@@ -59,10 +71,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                //false button pressed
-                mToast = Toast.makeText(MainActivityQuizActivity.this,R.string.correct_answer,Toast.LENGTH_SHORT);
-                mToast.setGravity(Gravity.TOP | Gravity.LEFT,410,200);
-                mToast.show();
+                checkAnswer(false);
             }
         });
         mNextButton.setOnClickListener(new View.OnClickListener()
@@ -70,8 +79,8 @@ public class MainActivityQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                mCurrentIndex = mCurrentIndex + 1;
-
+                mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
+                updateQuestion();
             }
         });
     }
