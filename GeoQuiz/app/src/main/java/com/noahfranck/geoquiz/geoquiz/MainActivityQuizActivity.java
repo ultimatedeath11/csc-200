@@ -27,6 +27,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
             };
 
     private int mCurrentIndex = 0;
+    private int myInt = 8;
 
     public MainActivityQuizActivity() {
     }
