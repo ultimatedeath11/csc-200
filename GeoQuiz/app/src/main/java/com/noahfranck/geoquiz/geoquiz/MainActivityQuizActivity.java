@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivityQuizActivity extends AppCompatActivity {
-    private static final String TAG = "QuizACtivity";
+    private static final String TAG = "QuizActivity";
 
     private Button mTrueButton;
     private Button mFalseButton;
@@ -30,6 +30,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
 
     public MainActivityQuizActivity() {
     }
+    //TODO change the toggleButtons so that it will toggle the next & previous buttons as well
     private void toggleButtons()
     {
         if (mTrueButton.isEnabled() == true)
