@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
     >
 
     <TextView
@@ -12,12 +10,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="24dp"
-        />ext
+        android:layout_gravity="center_horizontal"
+        />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical|center_horizontal"
+        >
 
         <Button
             android:id="@+id/true_button"
@@ -33,21 +34,25 @@
             android:text="@string/false_button"
             />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center">
+
         <Button
             android:id="@+id/previous_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/previous_button"
-            android:drawableLeft="@drawable/arrow_left"/>
+            android:drawableLeft="@drawable/arrow_left"
+            android:text="@string/previous_button"/>
+
         <Button
             android:id="@+id/next_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/next_button"
-            android:drawableRight="@drawable/arrow_right"/>
+            android:drawableRight="@drawable/arrow_right"
+            android:text="@string/next_button"/>
     </LinearLayout>
 
-</LinearLayout>
+</FrameLayout>
