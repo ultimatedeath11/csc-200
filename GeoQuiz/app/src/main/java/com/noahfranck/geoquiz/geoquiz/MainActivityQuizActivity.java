@@ -120,4 +120,34 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onStart(){
+        super.onStart();
+        Log.d(TAG,"onStart Called");
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        Log.d(TAG,"onResume Called");
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        Log.d(TAG,"onPaused Called");
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        Log.d(TAG,"onDestroy Called");
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+        Log.d(TAG,"onStop Called");
+    }
+
 }
