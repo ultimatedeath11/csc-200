@@ -38,13 +38,25 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         {
             mTrueButton.setEnabled(false);
             mFalseButton.setEnabled(false);
+            mPreviousQuestion.setEnabled(true);
+            mNextButton.setEnabled(true);
         }else
         if(mTrueButton.isEnabled() == false)
         {
             mTrueButton.setEnabled(true);
             mFalseButton.setEnabled(true);
+            mNextButton.setEnabled(false);
+            mPreviousQuestion.setEnabled(false);
         }
     }
+
+    private void disableButton(Button n){
+        n.setEnabled(false);
+    }
+    private void enableButton(Button n){
+        n.setEnabled(true);
+    }
+
     private void updateQuestion()
     {
         int question = mQuestionBank[mCurrentIndex].getTextResId();
@@ -73,7 +85,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
         Log.d(TAG,"onCreate called");
         if(savedInstanceState != null){
-            mCurrentIndex = savedInstanceState.getInt(KEY_INDEX,0);
+            mCurrentIndex = savedInstanceState.getInt(KEY_INDEX);
         }
 
         mTrueButton = (Button) findViewById(R.id.true_button);
@@ -108,7 +120,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
-                toggleButtons();
+                updateQuestion();
             }
         });
         mPreviousQuestion.setOnClickListener(new View.OnClickListener()
