@@ -26,12 +26,17 @@ public class MainActivityQuizActivity extends AppCompatActivity {
                     new Question(R.string.question_americas, true),
                     new Question(R.string.question_asia, true),
             };
+    private boolean answersBank[] = new boolean[mQuestionBank.length];
 
     private int mCurrentIndex = 0;
 
     public MainActivityQuizActivity() {
     }
-    //TODO change the toggleButtons so that it will toggle the next & previous buttons as well
+    //TODO implament the average of correct quesitons only call after answers bank is full
+    private double getAverage(){
+        return 0.0;
+    }
+
     private void toggleButtons()
     {
         if (mTrueButton.isEnabled() == true)
@@ -63,6 +68,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         mQuestionTextView.setText(question);
         toggleButtons();
     }
+    //TODO add their answer into the answer's bank array
     private void checkAnswer(boolean userPressedTrue)
     {
        boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
