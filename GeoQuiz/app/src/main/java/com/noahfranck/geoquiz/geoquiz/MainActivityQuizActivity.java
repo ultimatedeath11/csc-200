@@ -8,7 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivityQuizActivity extends AppCompatActivity {
+public class
+MainActivityQuizActivity extends AppCompatActivity {
     private static final String TAG = "QuizActivity";
     private static final String KEY_INDEX = "Index";
 
@@ -26,32 +27,42 @@ public class MainActivityQuizActivity extends AppCompatActivity {
                     new Question(R.string.question_americas, true),
                     new Question(R.string.question_asia, true),
             };
-    private boolean answersBank[] = new boolean[mQuestionBank.length];
-
+	private boolean quizComplete = false;
+    private int mCorrectAnswers = 0;
     private int mCurrentIndex = 0;
-
     public MainActivityQuizActivity() {
     }
     //TODO implament the average of correct quesitons only call after answers bank is full
     private double getAverage(){
-        return 0.0;
+        return mCorrectAnswers / mQuestionBank.length;
     }
 
     private void toggleButtons()
     {
-        if (mTrueButton.isEnabled() == true)
+        if (mTrueButton.isEnabled() == true && quizComplete == false)
         {
             mTrueButton.setEnabled(false);
             mFalseButton.setEnabled(false);
-            mPreviousQuestion.setEnabled(true);
             mNextButton.setEnabled(true);
         }else
-        if(mTrueButton.isEnabled() == false)
+        if(mTrueButton.isEnabled() == false && quizComplete == false)
         {
             mTrueButton.setEnabled(true);
             mFalseButton.setEnabled(true);
             mNextButton.setEnabled(false);
-            mPreviousQuestion.setEnabled(false);
+        }
+        else if(quizComplete == true  && mTrueButton.isEnabled() == true)
+        {
+	        mTrueButton.setEnabled(false);
+	        mFalseButton.setEnabled(false);
+	        mPreviousQuestion.setEnabled(false);
+	        mNextButton.setEnabled(false);
+        }
+        else if(quizComplete == true  && mTrueButton.isEnabled() == false)
+        {
+	        mTrueButton.setEnabled(false);
+	        mFalseButton.setEnabled(false);
+	        mPreviousQuestion.setEnabled(true);
         }
     }
 
@@ -66,6 +77,8 @@ public class MainActivityQuizActivity extends AppCompatActivity {
     {
         int question = mQuestionBank[mCurrentIndex].getTextResId();
         mQuestionTextView.setText(question);
+        if (mCurrentIndex == mQuestionBank.length - 1)
+        	quizComplete = true;
         toggleButtons();
     }
     //TODO add their answer into the answer's bank array
@@ -77,6 +90,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
        if(userPressedTrue == answerIsTrue)
        {
            messageResId = R.string.correct_answer;
+           mCorrectAnswers ++;
        }else{
            messageResId = R.string.incorrect_answer;
        }
@@ -93,7 +107,6 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         if(savedInstanceState != null){
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX);
         }
-
         mTrueButton = (Button) findViewById(R.id.true_button);
         mFalseButton = (Button) findViewById(R.id.false_button);
         mNextButton = (Button) findViewById(R.id.next_button);
@@ -101,7 +114,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         mPreviousQuestion = (Button) findViewById(R.id.previous_button);
         toggleButtons();
         updateQuestion();
-
+		disableButton(mPreviousQuestion);
         mTrueButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -138,7 +151,6 @@ public class MainActivityQuizActivity extends AppCompatActivity {
                     mCurrentIndex = mQuestionBank.length;
                 mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
                 updateQuestion();
-
             }
         });
     }
