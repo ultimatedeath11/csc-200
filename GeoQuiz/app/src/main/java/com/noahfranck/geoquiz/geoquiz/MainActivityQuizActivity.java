@@ -39,6 +39,7 @@ MainActivityQuizActivity extends AppCompatActivity {
 
     private void toggleButtons()
     {
+    	Log.d(TAG,"Toggle Button" + quizComplete);
         if (mTrueButton.isEnabled() == true && quizComplete == false)
         {
             mTrueButton.setEnabled(false);
@@ -63,6 +64,10 @@ MainActivityQuizActivity extends AppCompatActivity {
 	        mTrueButton.setEnabled(false);
 	        mFalseButton.setEnabled(false);
 	        mPreviousQuestion.setEnabled(true);
+        }
+        if(quizComplete == true) {
+	        mNextButton.setEnabled(false);
+	        getAverage();
         }
     }
 
