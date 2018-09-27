@@ -5,24 +5,24 @@
     build-mode="COLD"
     density="mdpi"
     format="10"
-    ir-eligibility="FIELD_TYPE_CHANGE"
+    ir-eligibility="METHOD_ADDED"
     plugin-version="3.1.4"
-    timestamp="1537888016766"
+    timestamp="1537890666704"
     token="5615482589718854761"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="282" />
+        duration="247" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="39" />
+        duration="36" />
     <task
         name="verifier"
-        duration="23" />
+        duration="9" />
 
     <artifact
         location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
@@ -74,8 +74,17 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="FIELD_TYPE_CHANGE"
-        timestamp="1537888016766"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1537890521684"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="METHOD_ADDED"
+        timestamp="1537890666704"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
