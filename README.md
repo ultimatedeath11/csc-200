@@ -1,7 +1,7 @@
 ###Mobile Device Programming
 ##Union University CSC 200
 ##Tought by Dr. G. Jan Wilms
-#Resources used <a href="https://www.bignerdranch.com/books/android-programming/">Big Nerd Ranch Android Programming Guide (3rd Edition)</a>
+#Resources used [Big Nerd Ranch Android Programming Guide \(3rd Edition\)](https://www.bignerdranch.com/books/android-programming/)
 ---
 #Student: Noah Franck
 ---
