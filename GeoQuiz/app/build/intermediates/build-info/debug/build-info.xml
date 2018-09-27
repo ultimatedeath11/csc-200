@@ -2,96 +2,104 @@
 <instant-run
     abi="x86"
     api-level="23"
-    build-mode="COLD"
-    density="mdpi"
+    build-mode="FULL"
+    density="420dpi"
     format="10"
-    ir-eligibility="METHOD_ADDED"
     plugin-version="3.1.4"
-    timestamp="1537890666704"
+    timestamp="1538062484715"
     token="5615482589718854761"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="247" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="36" />
+        duration="0" />
     <task
         name="verifier"
-        duration="9" />
+        duration="0" />
 
+    <artifact
+        location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
+    <artifact
+        location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        type="SPLIT" />
     <artifact
         location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-        type="SPLIT_MAIN" />
+        location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1537887702056"
+        timestamp="1538062484715"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
+            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
         <artifact
-            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
             location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
             location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1537890521684"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="METHOD_ADDED"
-        timestamp="1537890666704"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
+            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>
