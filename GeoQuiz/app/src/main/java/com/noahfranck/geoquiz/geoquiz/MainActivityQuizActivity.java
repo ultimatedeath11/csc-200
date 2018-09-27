@@ -13,6 +13,7 @@ MainActivityQuizActivity extends AppCompatActivity {
     private static final String TAG = "QuizActivity";
     private static final String KEY_INDEX = "Index";
 
+    private Toast mAverageToast;
     private Button mTrueButton;
     private Button mFalseButton;
     private Button mNextButton;
@@ -33,8 +34,9 @@ MainActivityQuizActivity extends AppCompatActivity {
     public MainActivityQuizActivity() {
     }
     //TODO implament the average of correct quesitons only call after answers bank is full
-    private double getAverage(){
-        return mCorrectAnswers / mQuestionBank.length;
+    private void getAverage(){
+        mAverageToast.setText(mCorrectAnswers/mQuestionBank.length);
+        mAverageToast.show();
     }
 
     private void toggleButtons()
@@ -52,21 +54,11 @@ MainActivityQuizActivity extends AppCompatActivity {
             mFalseButton.setEnabled(true);
             mNextButton.setEnabled(false);
         }
-        else if(quizComplete == true  && mTrueButton.isEnabled() == true)
-        {
-	        mTrueButton.setEnabled(false);
-	        mFalseButton.setEnabled(false);
-	        mPreviousQuestion.setEnabled(false);
-	        mNextButton.setEnabled(false);
-        }
-        else if(quizComplete == true  && mTrueButton.isEnabled() == false)
-        {
-	        mTrueButton.setEnabled(false);
-	        mFalseButton.setEnabled(false);
-	        mPreviousQuestion.setEnabled(true);
-        }
         if(quizComplete == true) {
-	        mNextButton.setEnabled(false);
+	        mNextButton.setEnabled(true);
+	        mPreviousQuestion.setEnabled(true);
+	        mFalseButton.setEnabled(false);
+	        mTrueButton.setEnabled(true);
 	        getAverage();
         }
     }
