@@ -35,7 +35,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
     private int mCurrentIndex = 0;
     public MainActivityQuizActivity() {
     }
-    //TODO No longer Crashes app but a 100 % yeilds 0. May also want to set its new gravity
+
     private void getAverage(){
        //mAverageToast.setText(Integer.toString(mCorrectAnswers/mQuestionBank.length));
 	    Toast mAverageToast = Toast.makeText(this,Double.toString((double)mCorrectAnswers / (double)mQuestionBank.length * 100), LENGTH_SHORT);
@@ -174,6 +174,8 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         Log.d(TAG,"onPaused Called");
     }
 
+    //TODO save the number of answeres answered correct so far
+	//TODO save the quiz state
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState){
         super.onSaveInstanceState(savedInstanceState);
