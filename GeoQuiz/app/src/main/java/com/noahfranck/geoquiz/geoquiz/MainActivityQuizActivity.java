@@ -174,7 +174,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         Log.d(TAG,"onPaused Called");
     }
 
-    //TODO save the number of answeres answered correct so far
+    //TODO save the number of answers answered correct so far
 	//TODO save the quiz state
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState){

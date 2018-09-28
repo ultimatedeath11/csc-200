@@ -1,13 +1,4 @@
-#Tue Sep 25 10:01:52 CDT 2018
-path.3=classes.dex
-path.2=classes.dex
-path.1=classes.dex
+#Thu Sep 27 22:19:33 CDT 2018
+base.0=/Users/Noah/WIP/mobile-device-programming/GeoQuiz/app/build/intermediates/transforms/dexMerger/debug/16
 path.0=classes.dex
-renamed.3=classes4.dex
-renamed.2=classes3.dex
-renamed.1=classes2.dex
 renamed.0=classes.dex
-base.3=/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/transforms/dexMerger/debug/12
-base.2=/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/transforms/dexMerger/debug/14
-base.1=/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/transforms/dexMerger/debug/11
-base.0=/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/transforms/dexMerger/debug/13
