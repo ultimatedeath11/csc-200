@@ -3,13 +3,15 @@ package com.noahfranck.geoquiz.geoquiz;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class
-MainActivityQuizActivity extends AppCompatActivity {
+import static android.widget.Toast.*;
+
+public class MainActivityQuizActivity extends AppCompatActivity {
     private static final String TAG = "QuizActivity";
     private static final String KEY_INDEX = "Index";
 
@@ -33,11 +35,13 @@ MainActivityQuizActivity extends AppCompatActivity {
     private int mCurrentIndex = 0;
     public MainActivityQuizActivity() {
     }
-    //TODO implament the average of correct quesitons only call after answers bank is full
+    //TODO No longer Crashes app but a 100 % yeilds 0. May also want to set its new gravity
     private void getAverage(){
-        mAverageToast.setText(mCorrectAnswers/mQuestionBank.length);
-        mAverageToast.show();
-    }
+       //mAverageToast.setText(Integer.toString(mCorrectAnswers/mQuestionBank.length));
+	    Toast mAverageToast = Toast.makeText(this,Double.toString((double)mCorrectAnswers / (double)mQuestionBank.length * 100), LENGTH_SHORT);
+	    mAverageToast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0,100);
+	    mAverageToast.show();
+        }
 
     private void toggleButtons()
     {
@@ -58,7 +62,7 @@ MainActivityQuizActivity extends AppCompatActivity {
 	        mNextButton.setEnabled(true);
 	        mPreviousQuestion.setEnabled(true);
 	        mFalseButton.setEnabled(false);
-	        mTrueButton.setEnabled(true);
+	        mTrueButton.setEnabled(false);
 	        getAverage();
         }
     }
@@ -74,11 +78,8 @@ MainActivityQuizActivity extends AppCompatActivity {
     {
         int question = mQuestionBank[mCurrentIndex].getTextResId();
         mQuestionTextView.setText(question);
-        if (mCurrentIndex == mQuestionBank.length - 1)
-        	quizComplete = true;
         toggleButtons();
     }
-    //TODO add their answer into the answer's bank array
     private void checkAnswer(boolean userPressedTrue)
     {
        boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
@@ -87,12 +88,12 @@ MainActivityQuizActivity extends AppCompatActivity {
        if(userPressedTrue == answerIsTrue)
        {
            messageResId = R.string.correct_answer;
-           mCorrectAnswers ++;
+           mCorrectAnswers = mCorrectAnswers + 1;
        }else{
            messageResId = R.string.incorrect_answer;
        }
 
-       Toast.makeText(this,messageResId,Toast.LENGTH_LONG).show();
+       makeText(this,messageResId, LENGTH_LONG).show();
         toggleButtons();
     }
 
@@ -135,7 +136,10 @@ MainActivityQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
+                mCurrentIndex = (mCurrentIndex + 1);
+	            if (mCurrentIndex == mQuestionBank.length)
+		            quizComplete = true;
+                mCurrentIndex = mCurrentIndex % mQuestionBank.length;
                 updateQuestion();
             }
         });
