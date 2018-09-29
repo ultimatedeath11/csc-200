@@ -14,6 +14,8 @@ import static android.widget.Toast.*;
 public class MainActivityQuizActivity extends AppCompatActivity {
     private static final String TAG = "QuizActivity";
     private static final String KEY_INDEX = "Index";
+    private static final String GRADE_INDEX = "Grade";
+    private static final String USER_ANSWERED_INDEX = "User Answered";
 
     private Toast mAverageToast;
     private Button mTrueButton;
@@ -41,7 +43,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
 	    Toast mAverageToast = Toast.makeText(this,Double.toString((double)mCorrectAnswers / (double)mQuestionBank.length * 100), LENGTH_SHORT);
 	    mAverageToast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0,100);
 	    mAverageToast.show();
-        }
+    }
 
     private void toggleButtons()
     {
@@ -104,6 +106,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         Log.d(TAG,"onCreate called");
         if(savedInstanceState != null){
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX);
+            mCorrectAnswers = savedInstanceState.getInt(GRADE_INDEX);
         }
         mTrueButton = (Button) findViewById(R.id.true_button);
         mFalseButton = (Button) findViewById(R.id.false_button);
@@ -181,6 +184,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         super.onSaveInstanceState(savedInstanceState);
         Log.i(TAG,"onSaveInstance");
         savedInstanceState.putInt(KEY_INDEX, mCurrentIndex);
+        savedInstanceState.putInt(GRADE_INDEX, mCorrectAnswers);
     }
 
     @Override
