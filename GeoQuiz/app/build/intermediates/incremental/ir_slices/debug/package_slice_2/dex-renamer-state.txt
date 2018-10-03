@@ -1,4 +1,0 @@
-#Thu Sep 27 21:23:03 CDT 2018
-base.0=/Users/Noah/WIP/mobile-device-programming/GeoQuiz/app/build/intermediates/transforms/dexMerger/debug/2
-path.0=classes.dex
-renamed.0=classes.dex
