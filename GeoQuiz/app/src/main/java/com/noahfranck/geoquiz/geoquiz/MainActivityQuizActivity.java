@@ -17,7 +17,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
     private static final String GRADE_INDEX = "Grade";
     private static final String USER_ANSWERED_INDEX = "User Answered";
 
-    private Toast mAverageToast;
+    private Button mCheatButton;
     private Button mTrueButton;
     private Button mFalseButton;
     private Button mNextButton;
@@ -113,10 +113,13 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         mNextButton = (Button) findViewById(R.id.next_button);
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
         mPreviousQuestion = (Button) findViewById(R.id.previous_button);
+        mCheatButton = (Button) findViewById(R.id.cheat_button);
+
         toggleButtons();
         updateQuestion();
 		disableButton(mPreviousQuestion);
-        mTrueButton.setOnClickListener(new View.OnClickListener()
+
+		mTrueButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
@@ -134,6 +137,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
 
             }
         });
+
         mNextButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -155,6 +159,13 @@ public class MainActivityQuizActivity extends AppCompatActivity {
                     mCurrentIndex = mQuestionBank.length;
                 mCurrentIndex = (mCurrentIndex - 1) % mQuestionBank.length;
                 updateQuestion();
+            }
+        });
+        mCheatButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                //should start new activity
+
             }
         });
     }
