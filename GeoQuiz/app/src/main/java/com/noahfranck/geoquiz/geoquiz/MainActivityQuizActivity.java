@@ -15,6 +15,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
     private static final String TAG = "QuizActivity";
     private static final String KEY_INDEX = "Index";
     private static final String GRADE_INDEX = "Grade";
+    private static final String GAME_STATE = "Grade State";
     private static final String USER_ANSWERED_INDEX = "User Answered";
 
     private Toast mAverageToast;
@@ -36,8 +37,9 @@ public class MainActivityQuizActivity extends AppCompatActivity {
                     new Question(R.string.question_vatican,false),
                     new Question(R.string.question_tennessee_motto,true)
             };
-	private boolean quizComplete = false;
+
     private int mCorrectAnswers = 0;
+    private boolean mQuizComplete;
     private int mCurrentIndex = 0;
     public MainActivityQuizActivity() {
     }
@@ -51,20 +53,20 @@ public class MainActivityQuizActivity extends AppCompatActivity {
 
     private void toggleButtons()
     {
-    	Log.d(TAG,"Toggle Button" + quizComplete);
-        if (mTrueButton.isEnabled() == true && quizComplete == false)
+    	Log.d(TAG,"Toggle Button" + mQuizComplete);
+        if (mTrueButton.isEnabled() == true && mQuizComplete == false)
         {
             mTrueButton.setEnabled(false);
             mFalseButton.setEnabled(false);
             mNextButton.setEnabled(true);
         }else
-        if(mTrueButton.isEnabled() == false && quizComplete == false)
+        if(mTrueButton.isEnabled() == false && mQuizComplete == false)
         {
             mTrueButton.setEnabled(true);
             mFalseButton.setEnabled(true);
             mNextButton.setEnabled(false);
         }
-        if(quizComplete == true) {
+        if(mQuizComplete == true) {
 	        mNextButton.setEnabled(true);
 	        mPreviousQuestion.setEnabled(true);
 	        mFalseButton.setEnabled(false);
@@ -111,6 +113,9 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         if(savedInstanceState != null){
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX);
             mCorrectAnswers = savedInstanceState.getInt(GRADE_INDEX);
+            mQuizComplete = savedInstanceState.getBoolean(GAME_STATE);
+        }else{
+            mQuizComplete = false;
         }
         mTrueButton = (Button) findViewById(R.id.true_button);
         mFalseButton = (Button) findViewById(R.id.false_button);
@@ -145,7 +150,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
             {
                 mCurrentIndex = (mCurrentIndex + 1);
 	            if (mCurrentIndex == mQuestionBank.length)
-		            quizComplete = true;
+		            mQuizComplete = true;
                 mCurrentIndex = mCurrentIndex % mQuestionBank.length;
                 updateQuestion();
             }
@@ -189,6 +194,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         Log.i(TAG,"onSaveInstance");
         savedInstanceState.putInt(KEY_INDEX, mCurrentIndex);
         savedInstanceState.putInt(GRADE_INDEX, mCorrectAnswers);
+        savedInstanceState.putBoolean(GAME_STATE, mQuizComplete);
     }
 
     @Override

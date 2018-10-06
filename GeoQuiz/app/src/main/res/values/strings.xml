@@ -13,7 +13,7 @@
     <string name="question_mississippi">Mississippi is the Longest River in America.</string>
     <string name="question_tokyo">Tokyo is the Largest City in the World</string>
     <string name="question_vatican">The Vatican is located in Itally</string>
-    <string name="question_tennessee_motto">"Agriculture and Commerce" is Tennessee's State Motto.</string>
+    <string name="question_tennessee_motto">\"Agriculture and Commerce\" is Tennessee\'s State Motto.</string>
     <string name="next_button">Next</string>
     <string name="previous_button">Previous</string>
 </resources>
