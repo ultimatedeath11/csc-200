@@ -1,5 +1,6 @@
 package com.noahfranck.geoquiz.geoquiz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -165,7 +166,8 @@ public class MainActivityQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 //should start new activity
-
+                Intent intent = new Intent(MainActivityQuizActivity.this,CheatAcitivy.class);
+                startActivity(intent);
             }
         });
     }
