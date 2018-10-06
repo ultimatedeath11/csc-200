@@ -31,6 +31,10 @@ public class MainActivityQuizActivity extends AppCompatActivity {
                     new Question(R.string.question_africa, false),
                     new Question(R.string.question_americas, true),
                     new Question(R.string.question_asia, true),
+                    new Question(R.string.question_tokyo,true),
+                    new Question(R.string.question_mississippi,true),
+                    new Question(R.string.question_vatican,false),
+                    new Question(R.string.question_tennessee_motto,true)
             };
 	private boolean quizComplete = false;
     private int mCorrectAnswers = 0;
