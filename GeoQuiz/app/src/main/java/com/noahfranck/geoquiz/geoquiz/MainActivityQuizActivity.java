@@ -110,21 +110,21 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
         Log.d(TAG,"onCreate called");
+        mTrueButton = (Button) findViewById(R.id.true_button);
+        mFalseButton = (Button) findViewById(R.id.false_button);
+        mNextButton = (Button) findViewById(R.id.next_button);
+        mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
+        mPreviousQuestion = (Button) findViewById(R.id.previous_button);
         if(savedInstanceState != null){
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX);
             mCorrectAnswers = savedInstanceState.getInt(GRADE_INDEX);
             mQuizComplete = savedInstanceState.getBoolean(GAME_STATE);
         }else{
             mQuizComplete = false;
+            disableButton(mPreviousQuestion);
         }
-        mTrueButton = (Button) findViewById(R.id.true_button);
-        mFalseButton = (Button) findViewById(R.id.false_button);
-        mNextButton = (Button) findViewById(R.id.next_button);
-        mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
-        mPreviousQuestion = (Button) findViewById(R.id.previous_button);
         toggleButtons();
         updateQuestion();
-		disableButton(mPreviousQuestion);
         mTrueButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
