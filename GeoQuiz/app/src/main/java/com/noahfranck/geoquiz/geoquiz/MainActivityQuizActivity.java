@@ -166,7 +166,8 @@ public class MainActivityQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 //should start new activity
-                Intent intent = new Intent(MainActivityQuizActivity.this,CheatAcitivy.class);
+                boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
+                Intent intent = CheatAcitivy.newIntent(MainActivityQuizActivity.this,answerIsTrue);
                 startActivity(intent);
             }
         });
