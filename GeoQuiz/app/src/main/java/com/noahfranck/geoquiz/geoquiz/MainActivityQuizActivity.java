@@ -16,12 +16,10 @@ import static android.widget.Toast.*;
 public class MainActivityQuizActivity extends AppCompatActivity {
     private static final String TAG = "QuizActivity";
     private static final String KEY_INDEX = "Index";
-<<<<<<< HEAD
-=======
+
     private static final String GRADE_INDEX = "Grade";
     private static final int REQUEST_CODE_CHEAT = 0;
     //private static final String USER_ANSWERED_INDEX = "User Answered";
->>>>>>> 81740ff54117e78285316fbffde2cc9b312b068b
 
     private Button mCheatButton;
     private Button mTrueButton;
