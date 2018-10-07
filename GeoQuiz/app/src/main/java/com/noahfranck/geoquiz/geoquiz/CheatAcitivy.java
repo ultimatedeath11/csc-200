@@ -47,6 +47,10 @@ public class CheatAcitivy extends AppCompatActivity {
 		});
 	}
 
+	public static boolean wasAnswerShown(Intent result){
+		return result.getBooleanExtra(EXTRA_ANSWER_SHOWN,false);
+	}
+
 	private void setAnswerShownResult(Boolean isAnswerShown){
 		Intent data = new Intent();
 		data.putExtra(EXTRA_ANSWER_SHOWN,isAnswerShown);

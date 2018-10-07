@@ -1,5 +1,6 @@
 package com.noahfranck.geoquiz.geoquiz;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +17,8 @@ public class MainActivityQuizActivity extends AppCompatActivity {
     private static final String TAG = "QuizActivity";
     private static final String KEY_INDEX = "Index";
     private static final String GRADE_INDEX = "Grade";
-    private static final String USER_ANSWERED_INDEX = "User Answered";
+    private static final int REQUEST_CODE_CHEAT = 0;
+    //private static final String USER_ANSWERED_INDEX = "User Answered";
 
     private Button mCheatButton;
     private Button mTrueButton;
@@ -24,6 +26,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
     private Button mNextButton;
     private Button mPreviousQuestion;
     private TextView mQuestionTextView;
+    private boolean mIsCheater;
     private Question[] mQuestionBank = new Question[]
             {
                     new Question(R.string.question_australia, true),
@@ -88,14 +91,16 @@ public class MainActivityQuizActivity extends AppCompatActivity {
        boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
        int messageResId = 0;
 
-       if(userPressedTrue == answerIsTrue)
-       {
-           messageResId = R.string.correct_answer;
-           mCorrectAnswers = mCorrectAnswers + 1;
-       }else{
-           messageResId = R.string.incorrect_answer;
+       if(mIsCheater){
+           messageResId = R.string.judgment_toast;
+       }else {
+           if (userPressedTrue == answerIsTrue) {
+               messageResId = R.string.correct_answer;
+               mCorrectAnswers = mCorrectAnswers + 1;
+           } else {
+               messageResId = R.string.incorrect_answer;
+           }
        }
-
        makeText(this,messageResId, LENGTH_LONG).show();
         toggleButtons();
     }
@@ -142,9 +147,9 @@ public class MainActivityQuizActivity extends AppCompatActivity {
         mNextButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 mCurrentIndex = (mCurrentIndex + 1);
+                mIsCheater = false;
 	            if (mCurrentIndex == mQuestionBank.length)
 		            quizComplete = true;
                 mCurrentIndex = mCurrentIndex % mQuestionBank.length;
@@ -168,9 +173,21 @@ public class MainActivityQuizActivity extends AppCompatActivity {
                 //should start new activity
                 boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
                 Intent intent = CheatAcitivy.newIntent(MainActivityQuizActivity.this,answerIsTrue);
-                startActivity(intent);
+                startActivityForResult(intent,REQUEST_CODE_CHEAT);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if(resultCode != Activity.RESULT_OK){
+            return;
+        }
+        if(requestCode == REQUEST_CODE_CHEAT){
+            if(data == null)
+                return;
+        }
+        mIsCheater = CheatAcitivy.wasAnswerShown(data);
     }
 
     @Override
