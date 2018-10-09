@@ -1,21 +1,27 @@
-#
-# Build configuration for Circle CI
-#
 
-general:
-    artifacts:
-        - /home/ubuntu/csc-200/app/build/outputs/apk/
-
-machine:
+version: 2
+jobs:
+  build:
+    docker:
+    - image: circleci/openjdk:8-jdk
+    working_directory: ~/repo
     environment:
-        ANDROID_HOME: /usr/local/android-sdk-linux
-
-dependencies:
-    override:
-        - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-19.1.0,android-19,extra-google-m2repository,extra-google-google_play_services,extra-android-support
-        - ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
-
-test:
-    override:
-        - (./gradlew assemble):
-            timeout: 360
+    - JVM_OPTS: -Xmx3200m
+    - TERM: dumb
+    steps:
+    - checkout
+    - restore_cache:
+        keys:
+        - v1-dependencies-{{ checksum "build.gradle" }}
+        - v1-dependencies-
+    - run: gradle dependencies
+    - save_cache:
+        paths:
+        - ~/.gradle
+        key: v1-dependencies-{{ checksum "build.gradle" }}
+    - run: gradle test
+workflows:
+  version: 2
+  workflow:
+    jobs:
+    - build
