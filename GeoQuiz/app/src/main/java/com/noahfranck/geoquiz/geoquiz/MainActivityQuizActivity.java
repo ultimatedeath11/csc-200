@@ -48,7 +48,7 @@ public class MainActivityQuizActivity extends AppCompatActivity {
 	    Toast mAverageToast = Toast.makeText(this,Double.toString((double)mCorrectAnswers / (double)mQuestionBank.length * 100), LENGTH_SHORT);
 	    mAverageToast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0,100);
 	    mAverageToast.show();
-        }
+    }
 
     private void toggleButtons()
     {
