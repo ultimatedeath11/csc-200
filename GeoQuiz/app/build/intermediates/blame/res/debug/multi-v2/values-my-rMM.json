@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/student/Desktop/mobile-device-programming/GeoQuiz/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-my-rMM/values-my-rMM.xml",
+            "outputFile": "/Users/Noah/WIP/mobile-device-programming/GeoQuiz/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-my-rMM/values-my-rMM.xml",
             "map": [
                 {
-                    "source": "/Users/student/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/f10a577b9816fd974aac5453720db91f/res/values-my-rMM/values-my-rMM.xml",
+                    "source": "/Users/Noah/.gradle/caches/transforms-1/files-1.1/appcompat-v7-24.2.0.aar/d92e02c37306d62370f6bf68dd3b8a71/res/values-my-rMM/values-my-rMM.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
